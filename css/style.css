@@ -1,0 +1,337 @@
+:root {
+    --pr: #FFD600;
+    /* Amarelo principal */
+    --txt: #181818;
+    /* Preto quase puro */
+    --br: #f6f6f6;
+    /* Cinza claro para fundo */
+    --hover-bg: #FFD600;
+    /* Amarelo para hover */
+    --btn-hover: #181818;
+    /* Preto para hover de botão */
+    --hover-txt: #fff;
+    /* Branco para texto em hover */
+    --accent: #444;
+    /* Cinza escuro para detalhes */
+}
+
+::selection {
+    background-color: var(--pr);
+    color: var(--hover-txt);
+}
+
+body {
+    background-color: var(--br);
+    color: var(--txt);
+}
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #fff !important;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-brand strong {
+    color: var(--pr) !important;
+}
+
+.nav-link,
+.navbar-brand {
+    color: var(--txt) !important;
+}
+
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+    color: var(--pr) !important;
+}
+
+.hero-section {
+    /* background: linear-gradient(120deg, #fffbe6 0%, #fff 100%); */
+    background-color: whitesmoke;
+    padding: 100px 0 80px 0;
+    position: static;
+    z-index: 0;
+    /* min-height: 60vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-card {
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(24, 24, 24, 0.066), 0 1.5px 6px rgba(255, 213, 0, 0.044);
+    border-radius: 0px;
+    padding: 48px 40px 36px 40px;
+    max-width: 540px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    transition: box-shadow 0.2s;
+    border: 1.5px solid #FFD600;
+    top: -40px;
+}
+
+.hero-card:hover {
+    box-shadow: 0 16px 48px rgba(24, 24, 24, 0.18), 0 2px 8px rgba(255, 214, 0, 0.12);
+}
+
+.hero-title {
+    color: #181818;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section .lead {
+    color: #555;
+    font-size: 1.08rem;
+    margin-bottom: 1.2rem;
+}
+
+.hero-section .btn-link {
+    color: #FFD600;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 1rem;
+    padding-left: 0;
+}
+
+.hero-section .btn-link:hover {
+    color: #bfa100;
+    text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 60px 0 30px 0;
+    }
+
+    .hero-card {
+        padding: 32px 16px 24px 16px;
+        max-width: 95vw;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-card {
+        padding: 20px 6vw 18px 6vw;
+    }
+
+    .hero-title {
+        font-size: 1.4rem;
+    }
+}
+
+.hero-title {
+    color: var(--pr);
+    font-weight: bold;
+}
+
+.hero-btn {
+    background-color: var(--pr);
+    color: #181818;
+    border: none;
+    border-radius: .1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: var(--btn-hover);
+    color: var(--hover-txt);
+}
+
+h2,
+h4,
+h5,
+h6 {
+    color: var(--txt);
+}
+
+/* Missão e Visão */
+.mission {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), url('../imagens/download\ \(2\).jfif') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contain {
+    width: 650px;
+    height: 300px;
+    background-color: rgba(24, 24, 24, 0.92);
+    color: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+    border-left: 10px solid var(--pr) !important;
+}
+
+.contain h4 {
+    color: var(--pr) !important;
+}
+
+/* Cards */
+#card,
+.cardespecial {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.1s, color 0.1s, box-shadow 0.1s;
+    cursor: pointer;
+    color: var(--txt);
+    border: 1.5px solid #FFD600;
+}
+
+.cardespecial {
+    background-color: var(--pr);
+    color: #181818;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cardespecial h5,
+.cardespecial p {
+    color: #181818 !important;
+}
+
+#card:hover,
+.cardespecial:hover {
+    background-color: var(--pr);
+    color: #181818;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+}
+
+#card:hover h5,
+#card:hover p,
+.cardespecial:hover h5,
+.cardespecial:hover p {
+    color: #181818 !important;
+}
+
+/* Ícones */
+.text-success,
+.bi-tree-fill,
+.bi-geo-alt-fill {
+    color: var(--pr) !important;
+}
+
+/* Contacto */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)), url('../imagens/sd\ \(11\).jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact .ab h2 {
+    color: var(--pr);
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.04);
+    width: 450px;
+    max-width: 90%;
+    color: var(--txt);
+}
+
+/* Empresas */
+.empresas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--pr);
+    color: #181818;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.whatsapp-float:hover {
+    background: #181818;
+    color: var(--pr);
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #181818 !important;
+    color: #fff;
+}
+
+footer a,
+footer .nav-link {
+    color: var(--pr) !important;
+}
+
+footer a:hover {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 1268px) {
+    .mission {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .contain {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .mission h1 {
+        font-size: 24px;
+    }
+
+    .mission p {
+        font-size: 16px;
+    }
+}
